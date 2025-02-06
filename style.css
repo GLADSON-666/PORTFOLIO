@@ -1,0 +1,9 @@
+header nav a
+{
+    text-decoration: none;
+}
+.home-img img{
+    width: 300px;
+    border-radius: 50%;
+    border: 3px;
+}
