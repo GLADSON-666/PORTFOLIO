@@ -2,3 +2,7 @@ learned more about styling and tags.
 implemented basic tags
 i was little confused about the git's working.
 february 6.
+
+day 2 february7.
+learned more about styles and animations.
+implemented animations.
