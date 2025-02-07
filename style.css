@@ -1,9 +1,130 @@
+*{
+margin: 0%;
+box-sizing: border-box;
+padding: 0%;
+}
+
 header nav a
 {
     text-decoration: none;
+    color: #0f0;
+    font-size: 18px;
+    margin:  25px; 
+    transition: 0.3s;
+}
+nav a:hover
+{
+    color: #fdfffd;
+}
+.home-img{
+    position: relative;
+    width:500px;
+    aspect-ratio:1;
+    border-radius:50%;
+    padding: 10px;
+    background: transparent;
+    z-index: 1;
 }
 .home-img img{
-    width: 300px;
-    border-radius: 50%;
-    border: 3px;
+    display: block;
+    width: 100%;
+    border-radius: inherit;
+    border: 3px ;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: top;    
+    background: #0a0a0a;
+}
+.home-img::before,
+.home-img::after{
+position: absolute;
+z-index:-1;
+content:'' ;
+inset: 5px;
+border-radius: inherit;
+border: 5px ;
+background-image: conic-gradient( transparent,transparent, #00ff00,transparent,transparent,#00ff00,transparent,transparent);
+animation:rotate 6s linear infinite;
+}
+.home-img::after{
+    filter: blur(15px);
+    opacity:0.7;
+}
+.home-img:hover::before,
+.home-img:hover::after{
+    animation-play-state: paused;
+}
+@keyframes rotate{
+    to{
+        rotate:360deg
+    }
+}
+
+
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+}
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #111;
+
+}
+.logo h1
+{
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(to right,#fc72ff,#6240ca,#487bff,#8f68ff,#fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+@keyframes animate-gradient{
+    to{
+        background-position: 200%;
+    }
+
+}
+.home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+.home-content h1 {
+    font-size: 3rem;
+}
+.home-content span{
+    color: #0f0;
+}
+.btn
+{
+    display: inline-block;
+    text-decoration: none;
+    background: #0f0;
+    color: black;
+    transition: 0.3ms;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 50px;  
+    margin: 10px;
+    padding:25px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+}
+.btn:hover.stars
+{
+    background: #f8fcf8;
+}
+.home-content{
+    margin: 50px;
+    font-size: larger;
+    font-family:'poppins',sans-serif;
+
 }
