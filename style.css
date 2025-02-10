@@ -1,29 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *{
 margin: 0%;
 box-sizing: border-box;
 padding: 0%;
+font-family: 'Poppins', sans-serif;
 }
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background:#0a0a0a;
 
+}
+nav {
+    display: flex;
+
+}
 header nav a
 {
     text-decoration: none;
-    color: #0f0;
-    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 500;
     margin:  25px; 
     transition: 0.3s;
+    width: 100%;
+    padding: 10px 15px;
 }
 nav a:hover
 {
-    color: #fdfffd;
+    color:#0f0;
+    border-radius: 5px;
 }
 .home-img{
     position: relative;
-    width:500px;
+    width:300px;
     aspect-ratio:1;
     border-radius:50%;
     padding: 10px;
     background: transparent;
     z-index: 1;
+    margin-left: 5%;
+    
 }
 .home-img img{
     display: block;
@@ -64,26 +85,31 @@ animation:rotate 6s linear infinite;
 body {
     background-color: #0a0a0a;
     color: #ffffff;
+  
 }
 header
 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
-    background: #111;
+    padding: 35px 45px;
+    background:#0a0a0a;
+    
 
 }
 .logo h1
 {
     color: white;
-    font-weight: bold;
-    background: linear-gradient(to right,#fc72ff,#6240ca,#487bff,#8f68ff,#fc72ff);
+    font-weight: 700;
+    font-size: 1.8rem;
+    background: linear-gradient(to right,#17c50e,#fafdfa,#0d6e19,#68c76c,#308f24);
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 2.5s linear infinite;
+    justify-content: left;
+    
 }
 @keyframes animate-gradient{
     to{
@@ -95,36 +121,53 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 100px;
+    padding: 80px 100px;  
+  
 }
 .home-content h1 {
     font-size: 3rem;
 }
 .home-content span{
-    color: #0f0;
+    color: rgb(244, 244, 244);
 }
 .btn
 {
     display: inline-block;
     text-decoration: none;
-    background: #0f0;
-    color: black;
+    background:black;
+    color: white;
     transition: 0.3ms;
     font-weight: bold;
     font-size: 17px;
     border-radius: 50px;  
+    border: 2px solid #00ff00;
+    overflow: hidden;
     margin: 10px;
-    padding:25px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding:10px 20px;
     text-transform: uppercase;
+    border: 2px solid transparent;
+
 }
-.btn:hover.stars
+.btn:hover
 {
-    background: #f8fcf8;
+    background: #00ff00;
+    color: #0a0a0a;
+    box-shadow: 0 0 15px #00ff00,0 0 45px #00ff00;
+    border-color: #00ff00;
 }
+.btn::before
+{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: ;
+}
+
 .home-content{
-    margin: 50px;
-    font-size: larger;
-    font-family:'poppins',sans-serif;
+    max-width: 70%;
+    padding: 10px;
 
 }
